@@ -672,4 +672,43 @@ document.addEventListener('DOMContentLoaded', () => {
         miniCats[miniIndex % miniCats.length].classList.add('active');
         miniIndex++;
     }, 1800);
+
+    const statNumbers = document.querySelectorAll('.stat-card__number');
+    let statsAnimated = false;
+
+    function animateStats() {
+        statNumbers.forEach(el => {
+            const target = parseInt(el.getAttribute('data-target'));
+            const duration = 2000;
+            const step = target / (duration / 16);
+            let current = 0;
+            const timer = setInterval(() => {
+                current = Math.min(current + step, target);
+                el.textContent = Math.floor(current).toLocaleString('es-PE');
+                if (current >= target) clearInterval(timer);
+            }, 16);
+        });
+    }
+
+    const statsSection = document.getElementById('stats');
+    const statsObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !statsAnimated) {
+                statsAnimated = true;
+                animateStats();
+            }
+        });
+    }, { threshold: 0.3 });
+    if (statsSection) statsObserver.observe(statsSection);
+
+    const segTabs = document.querySelectorAll('.seg-tab');
+    segTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            segTabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            const seg = tab.getAttribute('data-seg');
+            document.querySelectorAll('.seg-panel').forEach(p => p.classList.remove('active'));
+            document.getElementById('seg-' + seg).classList.add('active');
+        });
+    });
 });
