@@ -516,6 +516,79 @@
         </div>
     </section>
 
+    <section class="comparison" id="comparison">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-eyebrow">Comparativa</span>
+                <h2 class="section-title">Por qué Nexo Urbano es diferente</h2>
+            </div>
+            <div class="comparison__table-wrapper">
+                <table class="comparison__table">
+                    <thead>
+                    <tr>
+                        <th>Característica</th>
+                        <th class="col-nexo">Nexo Urbano</th>
+                        <th>Waze</th>
+                        <th>Guachiman.app</th>
+                        <th>Toke</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Reporte de emergencias urbanas</td>
+                        <td class="col-nexo"><span class="check">✓</span></td>
+                        <td><span class="partial">~</span></td>
+                        <td><span class="check">✓</span></td>
+                        <td><span class="partial">~</span></td>
+                    </tr>
+                    <tr>
+                        <td>Geolocalización automática</td>
+                        <td class="col-nexo"><span class="check">✓</span></td>
+                        <td><span class="check">✓</span></td>
+                        <td><span class="check">✓</span></td>
+                        <td><span class="check">✓</span></td>
+                    </tr>
+                    <tr>
+                        <td>Evidencia multimedia</td>
+                        <td class="col-nexo"><span class="check">✓</span></td>
+                        <td><span class="cross">✗</span></td>
+                        <td><span class="partial">~</span></td>
+                        <td><span class="cross">✗</span></td>
+                    </tr>
+                    <tr>
+                        <td>Conexión directa con autoridades</td>
+                        <td class="col-nexo"><span class="check">✓</span></td>
+                        <td><span class="cross">✗</span></td>
+                        <td><span class="cross">✗</span></td>
+                        <td><span class="partial">~</span></td>
+                    </tr>
+                    <tr>
+                        <td>Reporte anónimo</td>
+                        <td class="col-nexo"><span class="check">✓</span></td>
+                        <td><span class="cross">✗</span></td>
+                        <td><span class="cross">✗</span></td>
+                        <td><span class="cross">✗</span></td>
+                    </tr>
+                    <tr>
+                        <td>Mapa de zonas peligrosas</td>
+                        <td class="col-nexo"><span class="check">✓</span></td>
+                        <td><span class="partial">~</span></td>
+                        <td><span class="check">✓</span></td>
+                        <td><span class="cross">✗</span></td>
+                    </tr>
+                    <tr>
+                        <td>Cobertura a nivel Lima</td>
+                        <td class="col-nexo"><span class="check">✓</span></td>
+                        <td><span class="check">✓</span></td>
+                        <td><span class="check">✓</span></td>
+                        <td><span class="cross">✗</span></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
     <section class="map-section" id="map">
         <div class="container">
             <div class="section-header">
@@ -645,6 +718,128 @@
         </div>
     </section>
 
+    <section class="notifications-section" id="notifications">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-eyebrow">Notificaciones</span>
+                <h2 class="section-title">Siempre al tanto de lo que pasa</h2>
+            </div>
+            <div class="notif__demo">
+                <div class="notif__controls">
+                    <label class="toggle-row">
+                        <span>Alertas de emergencias cercanas</span>
+                        <label class="toggle">
+                            <input type="checkbox" checked id="toggleNearby">
+                            <span class="toggle__slider"></span>
+                        </label>
+                    </label>
+                    <label class="toggle-row">
+                        <span>Estado de mis reportes</span>
+                        <label class="toggle">
+                            <input type="checkbox" checked id="toggleStatus">
+                            <span class="toggle__slider"></span>
+                        </label>
+                    </label>
+                    <label class="toggle-row">
+                        <span>Alertas masivas de autoridades</span>
+                        <label class="toggle">
+                            <input type="checkbox" id="toggleMass">
+                            <span class="toggle__slider"></span>
+                        </label>
+                    </label>
+                    <label class="toggle-row">
+                        <span>Zonas peligrosas en mi ruta</span>
+                        <label class="toggle">
+                            <input type="checkbox" checked id="toggleRoute">
+                            <span class="toggle__slider"></span>
+                        </label>
+                    </label>
+                </div>
+                <div class="notif__feed" id="notifFeed">
+                    <div class="notif-item notif-item--emergency">
+                        <span class="notif-icon">🚨</span>
+                        <div class="notif-body">
+                            <strong>Accidente vehicular</strong>
+                            <span>Av. Javier Prado — a 300m de ti</span>
+                            <time>Hace 2 min</time>
+                        </div>
+                    </div>
+                    <div class="notif-item notif-item--status">
+                        <span class="notif-icon">📋</span>
+                        <div class="notif-body">
+                            <strong>Tu reporte #NX-2841 fue atendido</strong>
+                            <span>Bomberos llegaron al lugar</span>
+                            <time>Hace 15 min</time>
+                        </div>
+                    </div>
+                    <div class="notif-item notif-item--info">
+                        <span class="notif-icon">⚠️</span>
+                        <div class="notif-body">
+                            <strong>Zona de riesgo en tu ruta</strong>
+                            <span>Reportes frecuentes en Av. Brasil</span>
+                            <time>Hoy, 8:30 AM</time>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="history-section" id="history">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-eyebrow">Historial</span>
+                <h2 class="section-title">Seguimiento de tus reportes</h2>
+            </div>
+            <div class="history__demo">
+                <div class="history__filters">
+                    <button class="hist-filter active" data-hfilter="all">Todos</button>
+                    <button class="hist-filter" data-hfilter="pending">Pendientes</button>
+                    <button class="hist-filter" data-hfilter="active">En proceso</button>
+                    <button class="hist-filter" data-hfilter="resolved">Atendidos</button>
+                </div>
+                <div class="history__list" id="historyList">
+                    <div class="hist-item" data-status="resolved">
+                        <div class="hist-item__icon">🚗</div>
+                        <div class="hist-item__body">
+                            <strong>Accidente vehicular</strong>
+                            <span>Av. Javier Prado 1540</span>
+                            <time>05 Jun 2026 — 10:23 AM</time>
+                        </div>
+                        <span class="hist-badge hist-badge--resolved">Atendido</span>
+                    </div>
+                    <div class="hist-item" data-status="active">
+                        <div class="hist-item__icon">🔫</div>
+                        <div class="hist-item__body">
+                            <strong>Robo en curso</strong>
+                            <span>Miraflores, Jr. Lima</span>
+                            <time>06 Jun 2026 — 7:45 PM</time>
+                        </div>
+                        <span class="hist-badge hist-badge--active">En proceso</span>
+                    </div>
+                    <div class="hist-item" data-status="pending">
+                        <div class="hist-item__icon">⚡</div>
+                        <div class="hist-item__body">
+                            <strong>Fuga de gas</strong>
+                            <span>San Isidro, Calle Las Flores</span>
+                            <time>08 Jun 2026 — 9:12 AM</time>
+                        </div>
+                        <span class="hist-badge hist-badge--pending">Pendiente</span>
+                    </div>
+                    <div class="hist-item" data-status="resolved">
+                        <div class="hist-item__icon">🔥</div>
+                        <div class="hist-item__body">
+                            <strong>Incendio</strong>
+                            <span>La Victoria, Jr. Huánuco</span>
+                            <time>02 Jun 2026 — 3:30 PM</time>
+                        </div>
+                        <span class="hist-badge hist-badge--resolved">Atendido</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <!-- PERFIL DE USUARIO US24 US25 US26 US27 US28 US30 -->
     <section class="profile-section" id="profile">
         <div class="container">
