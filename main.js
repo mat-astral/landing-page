@@ -711,4 +711,22 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('seg-' + seg).classList.add('active');
         });
     });
+
+    const histFilters = document.querySelectorAll('.hist-filter');
+    const histItems = document.querySelectorAll('.hist-item');
+
+    histFilters.forEach(btn => {
+        btn.addEventListener('click', () => {
+            histFilters.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            const filter = btn.getAttribute('data-hfilter');
+            histItems.forEach(item => {
+                if (filter === 'all') {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = item.getAttribute('data-status') === filter ? 'flex' : 'none';
+                }
+            });
+        });
+    });
 });
